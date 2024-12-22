@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>My Word List</h1>
+      <button id="add-category-btn">+ New Category</button>
+    </div>
+
+    <div class="filters">
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="Search words...">
+        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24">
+          <path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/>
+        </svg>
+      </div>
+      <div class="filter-options">
+        <select id="language-select">
+          <option value="TR">Turkish</option>
+          <option value="DE">German</option>
+          <option value="ES">Spanish</option>
+          <option value="FR">French</option>
+          <option value="IT">Italian</option>
+        </select>
+        <select id="sort-by">
+          <option value="date-new">Newest First</option>
+          <option value="date-old">Oldest First</option>
+          <option value="alpha">Alphabetical</option>
+        </select>
+        <select id="category-filter">
+          <option value="">All Categories</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="words-list" id="words-list">
+      <!-- Words will be added here dynamically -->
+    </div>
+
+    <div id="add-category-modal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Add New Category</h2>
+        <input type="text" id="new-category-input" placeholder="Category name">
+        <div class="modal-actions">
+          <button id="cancel-category">Cancel</button>
+          <button id="save-category">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 
